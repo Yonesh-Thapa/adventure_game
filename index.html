@@ -100,7 +100,7 @@
 
     }
     function floor(x, y) {
-        return { name: "wall", position: { x: x, y: y }, symbol: "." };
+        return { name: "floor", position: { x: x, y: y }, symbol: "." };
 
     }
 
@@ -158,6 +158,7 @@
         what = look(destination)
         if (what == null || what.name == "floor") {
             //good to go!
+            console.log(destination);
             sprites[0].position = destination; // x and y at once
         }
         render();
